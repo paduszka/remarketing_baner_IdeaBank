@@ -1,0 +1,45 @@
+@charset "UTF-8";
+*{ -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border:none; }
+@font-face { font-family: tui_font; src: url(tui_bd.woff); font-weight: bold; }
+body { margin: auto; padding: 0px; font-family: tui_font, tahoma, arial, helvetica; font-size: 18px; }
+p { text-align: center; padding: 0px; width: 100%; }
+
+/* set ad size global */
+
+#container { width: 970px; height: 600px; background-color: #FFFFFF; border: solid 1px #e2e2e2; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background-image: url(bg.png); cursor: pointer; overflow: hidden; }
+
+#bg { width: 970px; height: 600px; cursor:pointer; }
+
+/* set box position global */
+
+#box1 { left: 20px; }
+#box2 { left: 340px; }
+#box3 { left: 659px; }
+
+/* box */
+
+.box { top: 150px; width: 290px; height: 300px; position: absolute; background-color: #FFFFFF; border: solid 1px #e2e2e2; }
+.dest_img { width: 290px; height: 190px; background-size: cover; background-color: #FFFFFF; }
+.price { line-height: 24px; height: 30px; color: #d50022; margin: 10px 0px 0px 0px; }
+.title { line-height: 24px; height: 30px; color: #042d53; margin: 0px 0px 0px 0px;  text-overflow:clip; overflow:hidden; }
+.sub_title { line-height: 16px; height: 16px; color: #042d53; margin: 10px 0px 0px 0px;  }
+
+/* box over */
+
+.blind { width:100%; height:30px; bottom:0px; position:absolute; margin:auto; background-color:#FFF; }
+.box_over { width: 300px; height: 300px; position: absolute; top: 0px; left: 0px; cursor: pointer; border: solid 10px #042d53; opacity: 0; }
+.box_over:hover { opacity: 1; }
+.btn { width: 160px; height: 40px; background-color: #ffe100; color: #072e52;  position: absolute; left: 60px; top: 260px; text-align: center; line-height: 40px; text-transform: uppercase; }
+.box_bg { background-color: #FFFFFF; height: 80px; width: 170px; position: absolute; top: 90px; }
+.add { width:140px; height:58px; position:absolute; top:10px; left:-26px; }
+.add2 { width:140px; height:58px; position:absolute; top:55px; left:-26px; }
+
+
+
+/* set loader */
+
+#content.show { display: block; }
+#content.hide, #loader.hide { display: none; }
+#loader.show { display: block; }
+#loader { text-align: center; font-size: 24px; line-height: 600px; background-color: #042d53; color: #FFFFFF; text-transform: uppercase; }
+
