@@ -33,18 +33,9 @@ creative.setupDOMElements = function ()
   creative.domElements.box_over1 = document.getElementById('box_over1');
   creative.domElements.box_over2 = document.getElementById('box_over2');
   creative.domElements.box_over3 = document.getElementById('box_over3');
-  creative.domElements.hotel_label1 = document.getElementById('hotel_label1');
-  creative.domElements.hotel_label2 = document.getElementById('hotel_label2');
-  creative.domElements.hotel_label3 = document.getElementById('hotel_label3');
-  creative.domElements.hotel_label1b = document.getElementById('hotel_label1b');
-  creative.domElements.hotel_label2b = document.getElementById('hotel_label2b');
-  creative.domElements.hotel_label3b = document.getElementById('hotel_label3b');
   creative.domElements.img_1 = document.getElementById('img1');
   creative.domElements.img_2 = document.getElementById('img2');
   creative.domElements.img_3 = document.getElementById('img3');
-  creative.domElements.price_1 = document.getElementById('price1');
-  creative.domElements.price_2 = document.getElementById('price2');
-  creative.domElements.price_3 = document.getElementById('price3');
   creative.domElements.title_1 = document.getElementById('title1');
   creative.domElements.title_2 = document.getElementById('title2');
   creative.domElements.title_3 = document.getElementById('title3');
@@ -52,6 +43,7 @@ creative.setupDOMElements = function ()
   creative.domElements.sub_title_2 = document.getElementById('subtitle2');
   creative.domElements.sub_title_3 = document.getElementById('subtitle3');
   creative.domElements.bg = document.getElementById('bg');
+  creative.domElements.btn = document.getElementById('btn');
 };
 
 // Daclaration of listeners
@@ -59,24 +51,26 @@ creative.setupDOMElements = function ()
 creative.enablerInitHandler = function (event)
 {
  creative.dynamicDataAvailable();
- creative.domElements.box_over1.addEventListener('click', creative.ctaClick1);
- creative.domElements.box_over2.addEventListener('click', creative.ctaClick2);
- creative.domElements.box_over3.addEventListener('click', creative.ctaClick3);
- creative.domElements.bg.addEventListener('click', creative.ctaClick4);
- 
+ creative.domElements.bg.addEventListener('click', creative.ctaClick1);
+ creative.domElements.btn.addEventListener('click', creative.ctaClick2);
+ creative.domElements.box_over1.addEventListener('click', creative.ctaClick3);
+ creative.domElements.box_over2.addEventListener('click', creative.ctaClick4);
+ creative.domElements.box_over3.addEventListener('click', creative.ctaClick5);
+
  creative.domElements.box_over1.addEventListener('mouseover', creative.over1);
  creative.domElements.box_over2.addEventListener('mouseover', creative.over2);
  creative.domElements.box_over3.addEventListener('mouseover', creative.over3);
  creative.domElements.bg.addEventListener('mouseover', creative.over4);
- 
+ creative.domElements.btn.addEventListener('mouseover', creative.over5);
+
 
   creative.showAd();
 
-  if (Enabler.isPageLoaded()) 
+  if (Enabler.isPageLoaded())
   {
     creative.pageLoadHandler();
   }
-  else 
+  else
   {
     Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, creative.pageLoadHandler);
   }
@@ -85,194 +79,90 @@ creative.enablerInitHandler = function (event)
 
 creative.dynamicDataAvailable = function ()
 {
-    Enabler.setProfileId(1071768);
-    var devDynamicContent = {};
+  Enabler.setProfileId(10028032);
+var devDynamicContent = {};
 
-    devDynamicContent.tui_doubleclick= [{},{},{}];
-    devDynamicContent.tui_doubleclick[0]._id = 0;
-    devDynamicContent.tui_doubleclick[0].id = ["VAR21052"];
-    devDynamicContent.tui_doubleclick[0].name = "Erma";
-    devDynamicContent.tui_doubleclick[0].summary = "\u015Aniadanie";
-    devDynamicContent.tui_doubleclick[0].brand = "Erma";
-    devDynamicContent.tui_doubleclick[0].price = 952;
-    devDynamicContent.tui_doubleclick[0].all_inclusive = false;
-    devDynamicContent.tui_doubleclick[0].url = {};
-    devDynamicContent.tui_doubleclick[0].url.Url = "http://www.tui.pl/wypoczynek/bulgaria/riwiera-bulgarska/erma-var21052/OfferCodeWS/WAWBOJ20160915063520160915201609221030L07VAR21052DZZ1GA02";
-    devDynamicContent.tui_doubleclick[0].image = {};
-    devDynamicContent.tui_doubleclick[0].image.Url = "http://media.tui.pl/media/tuiimages/h9f/h90/9001917513758.jpg";
-    devDynamicContent.tui_doubleclick[0].availability = true;
-    devDynamicContent.tui_doubleclick[0].Country = ["Bu\u0142garia"];
-    devDynamicContent.tui_doubleclick[0].Region = "Riwiera Bu\u0142garska";
-    devDynamicContent.tui_doubleclick[0].City = "Z\u0142ote Piaski";
-    devDynamicContent.tui_doubleclick[0].HotelName = "Erma";
-    devDynamicContent.tui_doubleclick[0].RoomDescription = "";
-    devDynamicContent.tui_doubleclick[0].Category = "Oferta katalogowa";
-    devDynamicContent.tui_doubleclick[0].Duration = 7;
-    devDynamicContent.tui_doubleclick[0].DeparturePlace = "Varna";
-    devDynamicContent.tui_doubleclick[0].DepartureDate = "";
-    devDynamicContent.tui_doubleclick[0].ServiceDescription = "\u015Aniadanie";
-    devDynamicContent.tui_doubleclick[0].Rating = 3.0;
-    devDynamicContent.tui_doubleclick[0].hotel_rodzinny = false;
-    devDynamicContent.tui_doubleclick[0].hotel_premium = false;
-    devDynamicContent.tui_doubleclick[1].id = ["VAR21052"];
-    devDynamicContent.tui_doubleclick[1].name = "Erma";
-    devDynamicContent.tui_doubleclick[1].summary = "\u015Aniadanie";
-    devDynamicContent.tui_doubleclick[1].brand = "Erma";
-    devDynamicContent.tui_doubleclick[1].price = 952;
-    devDynamicContent.tui_doubleclick[1].all_inclusive = false;
-    devDynamicContent.tui_doubleclick[1].url = {};
-    devDynamicContent.tui_doubleclick[1].url.Url = "http://www.tui.pl/wypoczynek/bulgaria/riwiera-bulgarska/erma-var21052/OfferCodeWS/WAWBOJ20160915063520160915201609221030L07VAR21052DZZ1GA02";
-    devDynamicContent.tui_doubleclick[1].image = {};
-    devDynamicContent.tui_doubleclick[1].image.Url = "http://media.tui.pl/media/tuiimages/h9f/h90/9001917513758.png";
-    devDynamicContent.tui_doubleclick[1].availability = true;
-    devDynamicContent.tui_doubleclick[1].Country = ["Bu\u0142garia"];
-    devDynamicContent.tui_doubleclick[1].Region = "Riwiera Bu\u0142garska";
-    devDynamicContent.tui_doubleclick[1].City = "Z\u0142ote Piaski";
-    devDynamicContent.tui_doubleclick[1].HotelName = "Erma";
-    devDynamicContent.tui_doubleclick[1].RoomDescription = "";
-    devDynamicContent.tui_doubleclick[1].Category = "Oferta katalogowa";
-    devDynamicContent.tui_doubleclick[1].Duration = 7;
-    devDynamicContent.tui_doubleclick[1].DeparturePlace = "Varna";
-    devDynamicContent.tui_doubleclick[1].DepartureDate = "";
-    devDynamicContent.tui_doubleclick[1].ServiceDescription = "\u015Aniadanie";
-    devDynamicContent.tui_doubleclick[1].Rating = 3.0;
-    devDynamicContent.tui_doubleclick[1].hotel_rodzinny = false;
-    devDynamicContent.tui_doubleclick[1].hotel_premium = true;
-    devDynamicContent.tui_doubleclick[2].id = ["VAR21052"];
-    devDynamicContent.tui_doubleclick[2].name = "Erma";
-    devDynamicContent.tui_doubleclick[2].summary = "\u015Aniadanie";
-    devDynamicContent.tui_doubleclick[2].brand = "Erma";
-    devDynamicContent.tui_doubleclick[2].price = 952;
-    devDynamicContent.tui_doubleclick[2].all_inclusive = false;
-    devDynamicContent.tui_doubleclick[2].url = {};
-    devDynamicContent.tui_doubleclick[2].url.Url = "http://www.tui.pl/wypoczynek/bulgaria/riwiera-bulgarska/erma-var21052/OfferCodeWS/WAWBOJ20160915063520160915201609221030L07VAR21052DZZ1GA02";
-    devDynamicContent.tui_doubleclick[2].image = {};
-    devDynamicContent.tui_doubleclick[2].image.Url = "http://media.tui.pl/media/tuiimages/h9f/h90/9001917513758.jpg";
-    devDynamicContent.tui_doubleclick[2].availability = true;
-    devDynamicContent.tui_doubleclick[2].Country = ["Bu\u0142garia"];
-    devDynamicContent.tui_doubleclick[2].Region = "Riwiera Bu\u0142garska";
-    devDynamicContent.tui_doubleclick[2].City = "Z\u0142ote Piaski";
-    devDynamicContent.tui_doubleclick[2].HotelName = "Erma";
-    devDynamicContent.tui_doubleclick[2].RoomDescription = "";
-    devDynamicContent.tui_doubleclick[2].Category = "Oferta katalogowa";
-    devDynamicContent.tui_doubleclick[2].Duration = 7;
-    devDynamicContent.tui_doubleclick[2].DeparturePlace = "Varna";
-    devDynamicContent.tui_doubleclick[2].DepartureDate = "";
-    devDynamicContent.tui_doubleclick[2].ServiceDescription = "\u015Aniadanie";
-    devDynamicContent.tui_doubleclick[2].Rating = 3.0;
-    devDynamicContent.tui_doubleclick[2].hotel_rodzinny = true;
-    devDynamicContent.tui_doubleclick[2].hotel_premium = true;
-    Enabler.setDevDynamicContent(devDynamicContent);
+devDynamicContent.IB_feed_kredyt_dla_firm_v1= [{},{},{}];
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[0]._id = 0;
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[0].produkt = "Kredyt FAIR \u2013 kredyt firmowy dla nowych Klient\u00F3w";
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[0].skrocona_nazwa_produktu = "Kredyt FAIR";
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[0].skrocony_opis = "Kredyt firmowy dla nowych Klient\u00F3w";
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[0].URL = {};
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[0].URL.Url = "https://www.ideabank.pl/tani-kredyt-online-fair";
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[0].Image_url = {};
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[0].Image_url.Url = "https://www.ideabank.pl/uploads/img/kredyt-fair-kredyt-firmowy-dla-nowych-klientow-2.jpg";
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[0].działalnosc_gospodarcza = true;
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[0].dsotepny = true;
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[1].produkt = "Kredyt FAIR \u2013 kredyt firmowy dla nowych Klient\u00F3w";
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[1].skrocona_nazwa_produktu = "Kredyt FAIR";
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[1].skrocony_opis = "Kredyt firmowy dla nowych Klient\u00F3w";
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[1].URL = {};
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[1].URL.Url = "https://www.ideabank.pl/tani-kredyt-online-fair";
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[1].Image_url = {};
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[1].Image_url.Url = "https://www.ideabank.pl/uploads/img/kredyt-fair-kredyt-firmowy-dla-nowych-klientow-2.jpg";
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[1].działalnosc_gospodarcza = true;
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[1].dsotepny = true;
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[2].produkt = "Kredyt FAIR \u2013 kredyt firmowy dla nowych Klient\u00F3w";
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[2].skrocona_nazwa_produktu = "Kredyt FAIR";
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[2].skrocony_opis = "Kredyt firmowy dla nowych Klient\u00F3w";
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[2].URL = {};
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[2].URL.Url = "https://www.ideabank.pl/tani-kredyt-online-fair";
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[2].Image_url = {};
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[2].Image_url.Url = "https://www.ideabank.pl/uploads/img/kredyt-fair-kredyt-firmowy-dla-nowych-klientow-2.jpg";
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[2].działalnosc_gospodarcza = true;
+devDynamicContent.IB_feed_kredyt_dla_firm_v1[2].dsotepny = true;
+Enabler.setDevDynamicContent(devDynamicContent);
 
-  creative.dd1 = dynamicContent.tui_doubleclick[0];
-  creative.dd2 = dynamicContent.tui_doubleclick[1];
-  creative.dd3 = dynamicContent.tui_doubleclick[2];
+  creative.dd1 = dynamicContent.IB_feed_kredyt_dla_firm_v1[0];
+  creative.dd2 = dynamicContent.IB_feed_kredyt_dla_firm_v1[1];
+  creative.dd3 = dynamicContent.IB_feed_kredyt_dla_firm_v1[2];
 };
 
 /// Set dynamic data for object
 
 creative.pageLoadHandler = function (event)
 {
-	creative.domElements.img_1.style.backgroundImage = "url('"+creative.dd1.image.Url+"')";
-	creative.domElements.img_2.style.backgroundImage = "url('"+creative.dd2.image.Url+"')";
-	creative.domElements.img_3.style.backgroundImage = "url('"+creative.dd3.image.Url+"')";
-	
-	creative.domElements.price_1.innerHTML = creative.dd1.price+" zł / "+creative.dd1.Duration+" dni";
-	creative.domElements.price_2.innerHTML = creative.dd2.price+" zł / "+creative.dd1.Duration+" dni";
-	creative.domElements.price_3.innerHTML = creative.dd3.price+" zł / "+creative.dd1.Duration+" dni";
-	
-	creative.domElements.title_1.innerHTML = creative.dd1.name;
-	creative.domElements.title_2.innerHTML = creative.dd2.name;
-	creative.domElements.title_3.innerHTML = creative.dd3.name;
-	
-	creative.domElements.sub_title_1.innerHTML = creative.dd1.Country;
-	creative.domElements.sub_title_2.innerHTML = creative.dd2.Country;
-	creative.domElements.sub_title_3.innerHTML = creative.dd3.Country;
-	
-	// set label for hotel 1
-	
-	if(creative.dd1.hotel_rodzinny == true && creative.dd1.hotel_premium == true)
-	{
-		creative.domElements.hotel_label1.style.background="url(add2.png)"
-		creative.domElements.hotel_label1b.style.background="url(add3.png)"
-	}
-	else if(creative.dd1.hotel_rodzinny == true)
-	{
-		creative.domElements.hotel_label1.style.background="url(add3.png)";
-	}
-	else if(creative.dd1.hotel_premium == true)
-	{
-		creative.domElements.hotel_label1.style.background="url(add2.png)";
-	}
-	else
-	{
-		creative.domElements.hotel_label1.style.background="url(add1.png)";
-	}
-	
-	// set label for hotel 2
-	
-	if(creative.dd2.hotel_rodzinny == true && creative.dd2.hotel_premium == true)
-	{
-		creative.domElements.hotel_label2.style.background="url(add2.png)"
-		creative.domElements.hotel_label2b.style.background="url(add3.png)"
-	}
-	else if(creative.dd2.hotel_rodzinny == true)
-	{
-		creative.domElements.hotel_label2.style.background="url(add3.png)";
-	}
-	else if(creative.dd2.hotel_premium == true)
-	{
-		creative.domElements.hotel_label2.style.background="url(add2.png)";
-	}
-	else
-	{
-		creative.domElements.hotel_label2.style.background="url(add1.png)";
-	}
-	
-	// set label for hotel 3
-	
-	if(creative.dd3.hotel_rodzinny == true && creative.dd3.hotel_premium == true)
-	{
-		creative.domElements.hotel_label3.style.background="url(add2.png)"
-		creative.domElements.hotel_label3b.style.background="url(add3.png)"
-	}
-	else if(creative.dd3.hotel_rodzinny == true)
-	{
-		creative.domElements.hotel_label3.style.background="url(add3.png)";
-	}
-	else if(creative.dd3.hotel_premium == true)
-	{
-		creative.domElements.hotel_label3.style.background="url(add2.png)";
-	}
-	else
-	{
-		creative.domElements.hotel_label3.style.background="url(add1.png)";
-	}
-	
-};
+	creative.domElements.img_1.style.backgroundImage = "url('"+creative.dd1.Image_url.Url+"')";
+	creative.domElements.img_2.style.backgroundImage = "url('"+creative.dd2.Image_url.Url+"')";
+	creative.domElements.img_3.style.backgroundImage = "url('"+creative.dd3.Image_url.Url+"')";
 
+	creative.domElements.title_1.innerHTML = creative.dd1.skrocona_nazwa_produktu;
+	creative.domElements.title_2.innerHTML = creative.dd2.skrocona_nazwa_produktu;
+	creative.domElements.title_3.innerHTML = creative.dd3.skrocona_nazwa_produktu;
+
+	creative.domElements.sub_title_1.innerHTML = creative.dd1.skrocony_opis;
+	creative.domElements.sub_title_2.innerHTML = creative.dd2.skrocony_opis;
+	creative.domElements.sub_title_3.innerHTML = creative.dd3.skrocony_opis;
+
+
+};
 // Set events
 
+//bg
 creative.ctaClick1 = function (event)
 {
-	Enabler.exitOverride('rem 1', creative.dd1.url.Url+'?utm_medium=valuemedia&utm_source=wp&utm_campaign=2017-12-26-remarketing&utm_term=ff-sg-sport-cb-xl&utm_content=970x600.html');
+	Enabler.exitOverride('rem klik w tlo','https://www.ideabank.pl/ranking-kredytow-dla-firm?utm_source=all&utm_medium=display&utm_content=studio&utm_campaign=9308964-kredyty&affid=N30306.123456STUDIO&vmp=vm');
 };
-
+//button
 creative.ctaClick2 = function (event)
 {
-	Enabler.exitOverride('rem 2', creative.dd2.url.Url+'?utm_medium=valuemedia&utm_source=wp&utm_campaign=2017-12-26-remarketing&utm_term=ff-sg-sport-cb-xl&utm_content=970x600.html');
+	Enabler.exitOverride('rem klik w button','https://www.ideabank.pl/ranking-kredytow-dla-firm?utm_source=all&utm_medium=display&utm_content=studio&utm_campaign=9308964-kredyty&affid=N30306.123456STUDIO&vmp=vm');
 };
 
 creative.ctaClick3 = function (event)
 {
-	Enabler.exitOverride('rem 3', creative.dd3.url.Url+'?utm_medium=valuemedia&utm_source=wp&utm_campaign=2017-12-26-remarketing&utm_term=ff-sg-sport-cb-xl&utm_content=970x600.html');
+	Enabler.exitOverride('rem 1', creative.dd1.URL.Url+'?utm_source=all&utm_medium=display&utm_content=studio&utm_campaign=9308964-kredyty&affid=N30306.123456STUDIO&vmp=vm');
 };
 
 creative.ctaClick4 = function (event)
 {
-	Enabler.exitOverride('rem klik w tlo','http://www.tui.pl/last-minute?utm_medium=valuemedia&utm_source=wp&utm_campaign=2017-12-26-remarketing&utm_term=ff-sg-sport-cb-xl&utm_content=970x600.html');
+	Enabler.exitOverride('rem 2', creative.dd2.URL.Url+'?utm_source=all&utm_medium=display&utm_content=studio&utm_campaign=9308964-kredyty&affid=N30306.123456STUDIO&vmp=vm');
 };
 
+creative.ctaClick5 = function (event)
+{
+	Enabler.exitOverride('rem 3', creative.dd3.URL.Url+'?utm_source=all&utm_medium=display&utm_content=studio&utm_campaign=9308964-kredyty&affid=N30306.123456STUDIO&vmp=vm');
+};
 
 // Set auto rotation function
 
@@ -289,7 +179,7 @@ creative.interval = function()
 		 creative.domElements.box_over3.style.opacity = 0;
 		 visibleCheck  = 2;
 	 }
-	 
+
 	 else if(visibleCheck == 2)
 	 {
 		 creative.domElements.box_over1.style.opacity = 0;
@@ -297,7 +187,7 @@ creative.interval = function()
 		 creative.domElements.box_over3.style.opacity = 0;
 		 visibleCheck  = 3;
 	 }
-	 
+
 	 else if(visibleCheck == 3)
 	 {
 		 creative.domElements.box_over1.style.opacity = 0;
@@ -338,6 +228,7 @@ creative.over4 = function (event)
 	creative.domElements.box_over2.style.opacity = 0;
 	creative.domElements.box_over3.style.opacity = 0;
 };
+
 
 // Is triggered when the background image in polite.js was fully loaded.
 
